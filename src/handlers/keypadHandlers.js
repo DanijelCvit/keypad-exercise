@@ -8,13 +8,13 @@ export const handleKeyPress = (key) => {
   display.textContent += key.textContent;
 
   // Play key dial tone
-  const dialTone = getDOMElement(key.textContent);
+  const touchTone = getDOMElement(key.textContent);
 
   if (keypadData.currentlyPlaying) {
     keypadData.currentlyPlaying.pause();
     keypadData.currentlyPlaying.currentTime = 0;
   }
-  keypadData.currentlyPlaying = dialTone;
+  keypadData.currentlyPlaying = touchTone;
 
-  dialTone.play();
+  touchTone.play();
 };

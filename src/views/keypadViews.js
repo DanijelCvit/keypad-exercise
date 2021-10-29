@@ -8,7 +8,7 @@ export const createKeyElement = (key) => {
   const audioElement = createDOMElement("audio");
   const sourceElement = createDOMElement("source");
 
-  sourceElement.src = key.dialTone;
+  sourceElement.src = key.touchTone;
   sourceElement.type = "audio/mpeg";
   audioElement.preload = "auto";
   audioElement.id = key.char;
